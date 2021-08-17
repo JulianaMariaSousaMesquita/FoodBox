@@ -1,0 +1,18 @@
+/*  ------------------- ESTILOS GERAIS  ------------------- */
+html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
+  margin: 0;
+  padding: 0;
+}
+
+/*  ------------------- Cores padrão  ------------------- */
+:root{
+  --colorBackgroundPrimary: #c0392b;
+  --colorBackgroundSecondary: #f6cb80;
+  --colorTextPrimary:#000;
+  --colorTextSecudary:#FFF;
+}
+
+.intro div {
+  background-color: var(--colorBackgroundPrimary);
+  color: var(--colorTextSecudary);
+}
