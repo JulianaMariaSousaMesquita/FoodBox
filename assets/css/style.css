@@ -1,18 +1,40 @@
 /*  ------------------- ESTILOS GERAIS  ------------------- */
 html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
-  margin: 0;
-  padding: 0;
+  padding: 10px;
+  margin: 5px;
+
+}
+
+body{
+  background-color: var(--colorBackgroundSecondary);
+  color: var(--colorTextSecudary);
 }
 
 /*  ------------------- Cores padrão  ------------------- */
 :root{
-  --colorBackgroundPrimary: #c0392b;
-  --colorBackgroundSecondary: #f6cb80;
+  --colorBackgroundPrimary: #CA002A;
+  --colorBackgroundSecondary: #DAA520;
   --colorTextPrimary:#000;
   --colorTextSecudary:#FFF;
 }
 
-.intro div {
+div {  
+  border-radius: 10px;
+}
+
+.top {
   background-color: var(--colorBackgroundPrimary);
-  color: var(--colorTextSecudary);
+  color: var(--colorTextSecudary); 
+}
+
+.product {
+  background-color: var(--colorTextSecudary);
+  color: var(--colorTextPrimary);
+  margin: 10px;
+}
+
+img {
+  width:150px;
+  border-radius: 15px;
+  float: right;
 }
