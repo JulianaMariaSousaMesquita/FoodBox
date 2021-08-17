@@ -12,8 +12,8 @@ body{
 
 /*  ------------------- Cores padrão  ------------------- */
 :root{
-  --colorBackgroundPrimary: #CA002A;
-  --colorBackgroundSecondary: #DAA520;
+  --colorBackgroundPrimary: #e60000;
+  --colorBackgroundSecondary: #800000;
   --colorTextPrimary:#000;
   --colorTextSecudary:#FFF;
 }
