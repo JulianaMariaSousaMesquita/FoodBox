@@ -5,7 +5,3 @@
 
 
 
-# Driven Education
-
-<a href="https://www.youtube.com/watch?v=TXEg617nuD4&t=153s"> Link aula 1 </a>
-
