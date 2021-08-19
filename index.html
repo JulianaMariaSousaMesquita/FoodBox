@@ -14,7 +14,7 @@
     </div>   
     
     <h1> Primeiro, seu prato</h1>
-    <div class="product">
+    <div id="tirinha" class="product" onclick="escolherPrato1()">
       <img src="assets/images/product1.jpg" />
       <h3>Tirinhas</h3>
       <p>CROCANTE POR FORA, MACIO POR DENTRO</p>
@@ -22,7 +22,7 @@
       <p> <strong>R$ 21,90</strong></p>
     </div>
 
-    <div class="product">
+    <div  id="pedaco" class="product" onclick="escolherPrato2()">
       <img src="assets/images/product2.jpg" />
       <h3>Pedaços</h3>
       <p>TRADIÇÃO E SABOR</p>
@@ -30,7 +30,7 @@
       <p> <strong>R$ 21,90</strong></p>
     </div>
     
-    <div class="product">
+    <div id="tirinhapedaco" class="product" onclick="escolherPrato3()" >
       <img src="assets/images/product3.jpg" />
       <h3>Tirinhas e Pedaços</h3>
       <p>TRADIÇÃO, SABOR e CROCANTE</p>
@@ -38,7 +38,7 @@
       <p> <strong>R$ 12,90</strong></p>  
     </div>
 
-    <div class="product">
+    <div id="batata" class="product" onclick="escolherPrato4()" >
       <img src="assets/images/product4.jpg" />
       <h3>Tirinhas, Pedaços e Batata</h3>
       <p>CROCANTE POR FORA, MACIO POR DENTRO</p>
@@ -56,7 +56,7 @@
     <div class="product">
       <img src="assets/images/product8.jpg" />
       <h3>Suco DEL VALLE</h3>
-      <p>Sabores: Pessego, uva, laranja maracuja.</p>
+      <p>Sabores: Pessego, uva, laranja e maracuja.</p>
       <p> <strong>R$ 5,90</strong></p>
     </div>
 
@@ -73,5 +73,37 @@
       <p>Quatro voltas e meia de sorvete no Baldinho, muito sorvete com calda de chocolate e cubinhos de brownie no topo</p>
       <p> <strong>R$ 7,90</strong></p>
     </div>
+    <center><button class="bt bt-lj"> Finalizar pedido </button></center>
+  
+    <script>
+      function escolherPrato1() {
+        document.getElementById("tirinha").style.borderColor = "#0b940b";
+        document.getElementById("pedaco").style.borderColor = "#fff";
+        document.getElementById("tirinhapedaco").style.borderColor = "#fff";
+        document.getElementById("batata").style.borderColor = "#fff";
+      }
+
+      function escolherPrato2() {
+        document.getElementById("pedaco").style.borderColor = "#0b940b";
+        document.getElementById("tirinha").style.borderColor = "#fff";
+        document.getElementById("tirinhapedaco").style.borderColor = "#fff";
+        document.getElementById("batata").style.borderColor = "#fff";
+      }
+
+      function escolherPrato3() {
+        document.getElementById("tirinhapedaco").style.borderColor = "#0b940b";
+        document.getElementById("pedaco").style.borderColor = "#fff";
+        document.getElementById("tirinha").style.borderColor = "#fff";
+        document.getElementById("batata").style.borderColor = "#fff";
+      }
+
+      function escolherPrato4() {
+        document.getElementById("batata").style.borderColor = "#0b940b";
+        document.getElementById("pedaco").style.borderColor = "#fff";
+        document.getElementById("tirinha").style.borderColor = "#fff";
+        document.getElementById("tirinhapedaco").style.borderColor = "#fff";
+      }
+
+    </script>
   </body>
 </html>
