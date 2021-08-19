@@ -14,7 +14,7 @@
     </div>   
     
     <h1> Primeiro, seu prato</h1>
-    <div id="tirinha" class="product" onclick="escolherPrato1()">
+    <div id="tirinha" class="product" onclick="escolherPrato('tirinha')">
       <img src="assets/images/product1.jpg" />
       <h3>Tirinhas</h3>
       <p>CROCANTE POR FORA, MACIO POR DENTRO</p>
@@ -22,7 +22,7 @@
       <p> <strong>R$ 21,90</strong></p>
     </div>
 
-    <div  id="pedaco" class="product" onclick="escolherPrato2()">
+    <div  id="pedaco" class="product" onclick="escolherPrato('pedaco')">
       <img src="assets/images/product2.jpg" />
       <h3>Pedaços</h3>
       <p>TRADIÇÃO E SABOR</p>
@@ -30,7 +30,7 @@
       <p> <strong>R$ 21,90</strong></p>
     </div>
     
-    <div id="tirinhapedaco" class="product" onclick="escolherPrato3()" >
+    <div id="tirinhapedaco" class="product" onclick="escolherPrato('tirinhapedaco')" >
       <img src="assets/images/product3.jpg" />
       <h3>Tirinhas e Pedaços</h3>
       <p>TRADIÇÃO, SABOR e CROCANTE</p>
@@ -38,7 +38,7 @@
       <p> <strong>R$ 12,90</strong></p>  
     </div>
 
-    <div id="batata" class="product" onclick="escolherPrato4()" >
+    <div id="batata" class="product" onclick="escolherPrato('batata')" >
       <img src="assets/images/product4.jpg" />
       <h3>Tirinhas, Pedaços e Batata</h3>
       <p>CROCANTE POR FORA, MACIO POR DENTRO</p>
@@ -47,13 +47,13 @@
     </div>
     
     <h1> Agora, sua bebida</h1>
-    <div class="product">
-      <img src="assets/images/product7.png" />
+    <div id="refri" class="product" onclick="escolherBebida('refri')" >
+      <img  src="assets/images/product7.png"/>
       <h3>Refrigerante</h3>
       <p>Sabores: Coca-Cola, Coca-Cola Zero, Sprite, Fanta Guaraná e Fanta Laranja.</p>
       <p> <strong>R$ 5,90</strong></p>
     </div>
-    <div class="product">
+    <div id="suco" class="product" onclick="escolherBebida('suco')" >
       <img src="assets/images/product8.jpg" />
       <h3>Suco DEL VALLE</h3>
       <p>Sabores: Pessego, uva, laranja e maracuja.</p>
@@ -61,47 +61,68 @@
     </div>
 
     <h1> Por fim, sua sobremesa</h1>
-    <div class="product">
+    <div id="sorvete" class="product" onclick="escolherSobremesa('sorvete')" >
       <img src="assets/images/product5.jpg" />
       <h3>Sorvete</h3>
       <p>Sorvete de baunilha numa deliciosa casquinha crocante.</p>
       <p> <strong>R$ 3,90</strong></p>
     </div>
-    <div class="product">
+    <div id="brownie" class="product" onclick="escolherSobremesa('brownie')">
       <img src="assets/images/product6.png" />
       <h3>Baldelírio Brownie</h3>
       <p>Quatro voltas e meia de sorvete no Baldinho, muito sorvete com calda de chocolate e cubinhos de brownie no topo</p>
       <p> <strong>R$ 7,90</strong></p>
     </div>
-    <center><button class="bt bt-lj"> Finalizar pedido </button></center>
+    <center><button class="bt bt-lj" onclick="finalizarPedido()"> Finalizar pedido </button></center>
   
     <script>
-      function escolherPrato1() {
-        document.getElementById("tirinha").style.borderColor = "#0b940b";
-        document.getElementById("pedaco").style.borderColor = "#fff";
-        document.getElementById("tirinhapedaco").style.borderColor = "#fff";
-        document.getElementById("batata").style.borderColor = "#fff";
+      var ip = 0;
+      var ib = 0;
+      var is = 0;
+
+      var vetP= new Array;
+      var vetB= new Array;
+      var vetS= new Array;
+      var Selecionados = new Array;
+
+      function escolherPrato(id) {        
+        vetP[ip] = id;
+        ip++;               
+        if(ip > 1){
+          for (k = 0; k < ip; k++){
+            document.getElementById(vetP[k]).style.borderColor = "#fff";
+          }            
+        }
+        document.getElementById(id).style.borderColor = "#0b940b";
+        Selecionados[0] = id;         
       }
 
-      function escolherPrato2() {
-        document.getElementById("pedaco").style.borderColor = "#0b940b";
-        document.getElementById("tirinha").style.borderColor = "#fff";
-        document.getElementById("tirinhapedaco").style.borderColor = "#fff";
-        document.getElementById("batata").style.borderColor = "#fff";
+      function escolherBebida(id){
+        vetB[ib] = id;
+        ib++;       
+        if(ib > 1){
+          for (k = 0; k < ib; k++){
+            document.getElementById(vetB[k]).style.borderColor = "#fff";
+          }            
+        }
+        document.getElementById(id).style.borderColor = "#0b940b";
+        Selecionados[1] = id;     
       }
 
-      function escolherPrato3() {
-        document.getElementById("tirinhapedaco").style.borderColor = "#0b940b";
-        document.getElementById("pedaco").style.borderColor = "#fff";
-        document.getElementById("tirinha").style.borderColor = "#fff";
-        document.getElementById("batata").style.borderColor = "#fff";
+      function escolherSobremesa(id){
+        vetS[is] = id;
+        is++;       
+        if(is > 1){
+          for (k = 0; k < is; k++){
+            document.getElementById(vetS[k]).style.borderColor = "#fff";
+          }            
+        }
+        document.getElementById(id).style.borderColor = "#0b940b";
+        Selecionados[2] = id;    
       }
 
-      function escolherPrato4() {
-        document.getElementById("batata").style.borderColor = "#0b940b";
-        document.getElementById("pedaco").style.borderColor = "#fff";
-        document.getElementById("tirinha").style.borderColor = "#fff";
-        document.getElementById("tirinhapedaco").style.borderColor = "#fff";
+      function finalizarPedido(){
+        alert(" Produtos selecionados : Prato principal " + Selecionados[0] +", Bebida "+ Selecionados[1] + " e Sobremesa " + Selecionados[2] + ".");
       }
 
     </script>

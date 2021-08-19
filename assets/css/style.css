@@ -30,7 +30,8 @@ div {
 
 .product {
   background-color: var(--colorTextSecudary);
-  color: var(--colorTextPrimary);
+  color: var(--colorTextPrimary);  
+  border: 5px solid var(--colorTextSecudary);
   margin: 10px;
 }
 
@@ -51,4 +52,8 @@ button {
   font-weight: bold;
   font-size: 18px;
   cursor: pointer;
+}
+
+button:hover {
+  background: var(--colorBackgroundThird);
 }
